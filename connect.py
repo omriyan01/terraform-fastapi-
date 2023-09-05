@@ -27,7 +27,7 @@ cursor = connection.cursor()
 
 @app.get("/")
 def get_posts():
-    cursor.execute("""SELECT * FROM posts""")
+    cursor.execute("""SELECT * FROM clients""")
     posts = cursor.fetchall()
     return posts
 
