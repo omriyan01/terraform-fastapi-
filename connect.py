@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 import psycopg2
 
 # Database connection details
-DB_HOST = "52.166.33.0"
+DB_HOST = "20.105.194.249"
 DB_PORT = "5432"
 DB_NAME = "omridb"
 DB_USER = "omri"
@@ -26,10 +26,10 @@ except Exception as e:
 cursor = connection.cursor()
 
 @app.get("/")
-def get_posts():
+async def get_clients():
     cursor.execute("""SELECT * FROM clients""")
-    posts = cursor.fetchall()
-    return posts
+    clients = cursor.fetchall()
+    return clients
 
 if __name__ == "__main__":
     import uvicorn
