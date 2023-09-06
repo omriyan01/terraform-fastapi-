@@ -18,7 +18,7 @@ sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE fastapi_db TO moshe;"
 
 
 echo "listen_addresses = '*'" | sudo tee -a /etc/postgresql/*/main/postgresql.conf
-echo "host   all    all 10.1.0.0/24     md5" | sudo tee -a /etc/postgresql/*/main/pg_hba.conf
+echo "host   all    all 10.0.0.4/24     md5" | sudo tee -a /etc/postgresql/*/main/pg_hba.conf
 sudo ufw allow 5432/tcp
 sudo service postgresql restart
 
