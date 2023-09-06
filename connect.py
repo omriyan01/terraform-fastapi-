@@ -2,7 +2,7 @@ from fastapi import FastAPI, HTTPException
 import psycopg2
 
 # Database connection details
-DB_HOST = "20.105.194.249"
+DB_HOST = "10.2.0.4"
 DB_PORT = "5432"
 DB_NAME = "omridb"
 DB_USER = "omri"
