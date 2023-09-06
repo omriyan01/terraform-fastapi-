@@ -2,15 +2,14 @@
 
 # Update package lists
 sudo apt update
+sudo apt install nano
 
-# Install Python 3 and pip
 sudo apt install -y python3 python3-pip
+pip install flask 
+pip psycopg2-binary
+ 
 
-# Install Flask using pip
-sudo apt install libpq-dev -y
-pip3 install fastapi
-pip3 install uvicorn
-pip3 install psycopg2 
-
-wget -O connect.py https://raw.githubusercontent.com/omriyan01/terraform-fastapi-/main/connect.py
-sudo python3 ./connect.py
+sudo apt-get update 
+sudo apt install git -y  
+git clone https://github.com/omriyan01/terraform-fastapi-.git
+python3 /var/lib/waagent/custom-script/download/0/terraform-fastapi-/connect.py
