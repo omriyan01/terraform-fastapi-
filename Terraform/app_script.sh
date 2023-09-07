@@ -1,15 +1,15 @@
 #!/bin/bash
 
-#!/bin/bash
+# Install necessary packages
+sudo apt-get update
+apt install nano
 
-# Update package lists
-sudo apt-get update 
-
-sudo apt install -y python3 python3-pip
-pip install flask 
+apt install python3
+apt install python3-pip -y
+pip install flask
 pip install psycopg2-binary
- 
 
+# Clone repo and run scripts
 sudo apt install git -y  
 git clone https://github.com/omriyan01/terraform-fastapi-.git
 sudo python3 /var/lib/waagent/custom-script/download/0/terraform-fastapi-/connect.py
