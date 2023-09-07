@@ -310,7 +310,7 @@ resource "azurerm_virtual_machine_extension" "vm-db-extension" {
 
   settings = <<SETTINGS
 {
-  "commandToExecute": "sudo apt-get update && sudo apt install git -y && git clone ${var.git_repo} && sudo bash ${var.extension_git_path}/database_script.sh "
+  "commandToExecute": "sudo apt-get update && sudo apt install git -y && git clone ${var.git_repo} && sudo bash ${var.extension_git_path}/script.sh "
 }
 SETTINGS
 
