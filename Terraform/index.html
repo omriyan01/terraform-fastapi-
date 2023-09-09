@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Insert Data</title>
-</head>
-<body>
-    <h1>Insert Data into PostgreSQL</h1>
-    <form method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="name" required><br><br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br><br>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
+\{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Books {% endblock %}</h1>
+    {% for book in books %}
+        <div class='book'>
+            <h3>#{{ book[0] }} - {{ book[1] }} BY {{ book[2] }}</h3>
+            <i><p>({{ book[3] }} pages)</p></i>
+            <p class='review'>{{ book[4] }}</p>
+            <i><p>Added {{ book[5] }}</p></i>
+        </div>
+    {% endfor %}
+{% endblock %}
